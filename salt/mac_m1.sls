@@ -32,7 +32,7 @@ deploy_adapta_nokto_theme:
 
 deploy_double_scaling_desktop_config:
   file.managed:
-    - name:    /home/{{ user }}/.config/autostart/double-scaling.desktop
+    - name:   /home/{{ user }}/.config/autostart/double-scaling.desktop
     - source: salt://files/mac_m1/double-scaling.desktop
     - user:   {{ user }}
     - group:  {{ user }}
