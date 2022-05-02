@@ -43,6 +43,7 @@ add_pkgs:
       - python3-wheel
       - salt-minion
       - speedtest-cli
+      - wireguard-tools
       - x2goserver
       - x2goserver-desktopsharing
       - xdotool
