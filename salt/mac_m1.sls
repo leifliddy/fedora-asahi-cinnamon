@@ -1,6 +1,5 @@
 {% set user = 'leif.liddy' %}
 
-
 ensure_autostart_dir_exists:
   file.directory:
     - name:     /home/{{ user }}/.config/autostart
