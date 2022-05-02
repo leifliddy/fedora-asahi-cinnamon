@@ -1,6 +1,5 @@
 {% set timezone = 'Europe/Berlin' %}
 
-
 set_timezone:
   cmd.run:
     - name: timedatectl set-timezone {{ timezone }}
