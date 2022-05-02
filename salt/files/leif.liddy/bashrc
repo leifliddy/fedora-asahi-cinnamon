@@ -1,0 +1,12 @@
+alias de='cd ~/Desktop'
+alias cr='su - root'
+
+findit() {
+  find . -type f | xargs grep $1
+}
+
+removetrailingwhitespace() {
+   sed -i 's/[ \t]*$//' "$1"
+}
+
+

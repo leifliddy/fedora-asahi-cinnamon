@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=dconf write /org/cinnamon/desktop/interface/scaling-factor 'uint32 2'
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[C]=double-scaling
+Comment[C]=enable double (Hi-DPI) scaling
+X-GNOME-Autostart-Delay=0

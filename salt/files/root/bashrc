@@ -1,0 +1,11 @@
+alias vi='vim'
+alias de='cd /home/leif.liddy/Desktop'
+alias luf='systemctl list-unit-files'
+#alias updategrub='grub2-mkconfig -o /etc/grub2-efi.cfg'
+alias showerror='journalctl -p err -b'
+alias vacuum='journalctl --vacuum-time=1d'
+
+alias wgup='systemctl start wg-quick@wg0'
+alias wgdown='systemctl stop wg-quick@wg0'
+alias wgenable='systemctl enable wg-quick@wg0'
+alias wgdisable='systemctl disable wg-quick@wg0'
