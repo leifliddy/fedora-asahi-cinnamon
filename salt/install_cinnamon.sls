@@ -62,7 +62,3 @@ add_pkgs:
 #install_brave_browser:
 #  pkg.installed:
 #    - name: brave-browser
-
-
-
-
