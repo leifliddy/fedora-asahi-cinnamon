@@ -50,7 +50,7 @@ add_pkgs:
       - youtube-dl
 
 
-# sadly aarch64 is not currently supported (yet)
+# sadly aarch64 is not supported (yet)
 #install_brave_brower_repo:
 #  cmd.run:
 #    - name: dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
