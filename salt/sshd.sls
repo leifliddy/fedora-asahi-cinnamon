@@ -7,7 +7,6 @@ deploy_sshd_base_restrict:
     - group:  root
     - mode:   600
 
-
 enable_reload_sshd_service:
   service.running:
     - name: sshd
