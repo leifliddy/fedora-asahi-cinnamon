@@ -6,6 +6,15 @@ install_cinnamon_group:
   cmd.run:
     - name: dnf group install -y 'Cinnamon Desktop'
 
+reload_systemd_networkd_service:
+  service.running:
+    - name: systemd-networkd
+    - reload true:
+    - watch:
+      - install_cinnamon_group
+    - onlyif:
+      - test systemctl is-active --quiet systemd-networkd
+
 remove_pkgs:
   pkg.removed:
     - pkgs:
