@@ -8,7 +8,7 @@ echo 'file_client: local' > /etc/salt/minion.d/local.conf
 mkdir -p /srv/salt
 rsync -aHAX salt/ /srv/salt
 
-states='install_rpmfusion_free pam_su user_leif user_root sshd install_cinnamon set_time mac_m1'
+states='install_rpmfusion_free pam_su user_leif user_root sshd install_cinnamon dnf set_time mac_m1'
 
 for state in $states
 do
