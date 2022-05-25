@@ -49,6 +49,14 @@ deploy_bashrc_podman:
     - user:   {{ user }}
     - group:  {{ user }}
     - mode:   644
+    
+deploy_bashrc_rpmbuild:
+  file.managed:
+    - name:   /home/{{ user }}/.bashrc.d/rpmbuild
+    - source: salt://files/bashrc_rpmbuild
+    - user:   {{ user }}
+    - group:  {{ user }}
+    - mode:   644
 
 deploy_vimrc:
   file.managed:
