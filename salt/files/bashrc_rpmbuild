@@ -1,0 +1,6 @@
+alias gospec='cd ~/rpmbuild/SPECS'
+alias gosource='cd ~/rpmbuild/SOURCES'
+alias gobuild='cd ~/rpmbuild/BUILD'
+alias gobuildroot='cd ~/rpmbuild/BUILDROOT'
+alias gorpm='cd ~/rpmbuild/RPMS'
+alias gosrpm='cd ~/rpmbuild/SRPMS'
