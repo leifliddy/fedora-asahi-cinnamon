@@ -15,4 +15,6 @@ do
    salt-call state.sls $state
 done
 
-systemctl disable iwd systemd-networkd
+# don't enable NetworkManager yet. Need to perform more testing.
+systemctl disable --now NetworkManager.service
+#systemctl enable --now iwd systemd-networkd
