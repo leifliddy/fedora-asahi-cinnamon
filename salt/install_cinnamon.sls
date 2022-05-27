@@ -6,10 +6,16 @@ install_cinnamon_group:
   cmd.run:
     - name: dnf group install -y 'Cinnamon Desktop'
 
-reload_systemd_networkd_service:
+restart_systemd_resolved_service:
+  service.running:
+    - name: systemd-resolved
+    - watch:
+      - install_cinnamon_group
+
+restart_systemd_networkd_service:
   service.running:
     - name: systemd-networkd
-    - reload true:
+    - reload: true
     - watch:
       - install_cinnamon_group
     - onlyif:
@@ -59,6 +65,9 @@ add_pkgs:
       - xinput
       - youtube-dl
 
+mask_systemd_udev_settle_service:
+  service.masked:
+    - name: systemd-udev-settle
 
 # sadly aarch64 is not supported (yet)
 #install_brave_brower_repo:
