@@ -17,4 +17,4 @@ done
 
 # don't enable NetworkManager yet. Need to perform more testing.
 systemctl disable --now NetworkManager.service
-#systemctl enable --now iwd systemd-networkd
+#systemctl disable --now iwd systemd-networkd
