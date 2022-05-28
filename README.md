@@ -7,7 +7,7 @@ I started this project to automate the provisioning of a newly built M1 system.
 So everything is geared towards my preferences.  
 You'll obviously need to modify things to suit your needs.  
 
-```Salt``` isn't the most readable or intuitive configuration management system, but it's really powerful (and it's what I know)  
+```salt``` isn't the most readable or intuitive configuration management system, but it's really powerful (and it's what I know)  
 Hopefully, you can sort of understand how it works by looking at the state files (.sls) in this project.  
 
 If you have any questions on how to implement something in ```salt```, please let me know and I'll try to help you out.  
