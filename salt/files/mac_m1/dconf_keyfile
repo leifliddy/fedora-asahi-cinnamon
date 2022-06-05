@@ -102,6 +102,11 @@ side-panel-size=200
 size=(900, 700)
 state=87168
 
+[org/gnome/login-screen]
+enable-fingerprint-authentication=false
+enable-password-authentication=true
+enable-smartcard-authentication=false
+
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(46,52,54)'
 bold-is-bright=true
@@ -114,6 +119,9 @@ selected-color=(true, 1.0, 1.0, 1.0, 1.0)
 
 [org/nemo/desktop]
 trash-icon-visible=false
+
+[org/nemo/preferences]
+default-folder-viewer='list-view'
 
 [org/nemo/window-state]
 geometry='800x550+230+100'
