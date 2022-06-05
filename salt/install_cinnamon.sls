@@ -24,6 +24,7 @@ restart_systemd_networkd_service:
 remove_pkgs:
   pkg.removed:
     - pkgs:
+      - device-mapper-multipath
       - dnfdragora
       - eom
       - hexchat
