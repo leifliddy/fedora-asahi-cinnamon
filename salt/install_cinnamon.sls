@@ -57,6 +57,7 @@ add_pkgs:
       - python3-podman
       - python3-termcolor
       - python3-wheel
+      - rpmdevtools
       - salt-minion
       - speedtest-cli
       - wireguard-tools
