@@ -9,3 +9,7 @@ alias wgup='systemctl start wg-quick@wg0'
 alias wgdown='systemctl stop wg-quick@wg0'
 alias wgenable='systemctl enable wg-quick@wg0'
 alias wgdisable='systemctl disable wg-quick@wg0'
+
+removetrailingwhitespace() {
+   sed -i 's/[ \t]*$//' "$1"
+}
