@@ -67,9 +67,9 @@ add_pkgs:
       - xinput
       - youtube-dl
 
-mask_systemd_udev_settle_service:
-  service.masked:
-    - name: systemd-udev-settle
+#mask_systemd_udev_settle_service:
+#  service.masked:
+#    - name: systemd-udev-settle
 
 # sadly aarch64 is not supported (yet)
 #install_brave_brower_repo:
