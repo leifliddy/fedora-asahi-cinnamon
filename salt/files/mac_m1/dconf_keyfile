@@ -61,8 +61,8 @@ sleep-inactive-ac-timeout=0
 sleep-inactive-battery-timeout=0
 
 [org/cinnamon/sounds]
-login-enabled=true
-logout-enabled=true
+login-enabled=false
+logout-enabled=false
 
 [org/gnome/desktop/a11y/applications]
 screen-keyboard-enabled=false
