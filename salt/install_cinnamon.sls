@@ -67,6 +67,10 @@ add_pkgs:
       - xinput
       - youtube-dl
 
+disable_lvm2_monitor_service:
+  service.dead:
+    - name: lvm2-monitor
+
 #mask_systemd_udev_settle_service:
 #  service.masked:
 #    - name: systemd-udev-settle
