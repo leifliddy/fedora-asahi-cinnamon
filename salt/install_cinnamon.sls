@@ -1,7 +1,10 @@
+# update all packages
+update_pkgs:
+  pkg.uptodate:
+    - refresh : True
 
 # pkg.group_installed doesn't currently work for environmental groups like 'Cinnamon Desktop'
 # using cmd.run for now....
-
 install_cinnamon_group:
   cmd.run:
     - name: dnf group install -y 'Cinnamon Desktop'
