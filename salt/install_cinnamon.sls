@@ -49,21 +49,27 @@ remove_pkgs:
 add_pkgs:
   pkg.installed:
     - pkgs:
+      - blueberry
       - evince
       - gedit
+      - gedit-plugin-codecomment
       - git
       - kernel-devel
       - mpv
+      - nmap
       - podman
       - podman-docker
       - python3-pip
       - python3-podman
       - python3-termcolor
       - python3-wheel
+      - redshift
       - rpmdevtools
       - salt-minion
       - speedtest-cli
+      - telnet
       - wireguard-tools
+      - x2goclient
       - x2goserver
       - x2goserver-desktopsharing
       - xdotool
