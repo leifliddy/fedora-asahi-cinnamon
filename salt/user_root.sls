@@ -55,3 +55,11 @@ deploy_vimrc:
     - user:   {{ user }}
     - group:  {{ user }}
     - mode:   644
+    
+deploy_rpmmacros:
+  file.managed:
+    - name:   /{{ user }}/.rpmmacros
+    - source: salt://files/rpmmacros
+    - user:   {{ user }}
+    - group:  {{ user }}
+    - mode:   644
