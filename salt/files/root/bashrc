@@ -13,3 +13,7 @@ alias wgdisable='systemctl disable wg-quick@wg0'
 removetrailingwhitespace() {
    sed -i 's/[ \t]*$//' "$1"
 }
+
+findit() {
+  find . -type f | xargs grep $1
+}
