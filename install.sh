@@ -2,7 +2,7 @@
 
 set -e
 
-dnf install -y salt-minion
+dnf install -y salt-minion rsync
 echo 'file_client: local' > /etc/salt/minion.d/local.conf
 
 mkdir -p /srv/salt
