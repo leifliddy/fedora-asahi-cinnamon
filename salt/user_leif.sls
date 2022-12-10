@@ -68,7 +68,7 @@ deploy_vimrc:
 
 deploy_rpmmacros:
   file.managed:
-    - name:   /{{ user }}/.rpmmacros
+    - name:   /home/{{ user }}/.rpmmacros
     - source: salt://files/rpmmacros
     - user:   {{ user }}
     - group:  {{ user }}
