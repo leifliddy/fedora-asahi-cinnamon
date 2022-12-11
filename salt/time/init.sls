@@ -1,4 +1,4 @@
-{% set timezone = 'Europe/Berlin' %}
+{% set timezone = salt['pillar.get']('timezone') %}
 
 set_timezone:
   cmd.run:

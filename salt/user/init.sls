@@ -1,4 +1,5 @@
-{% set user = 'leif.liddy' %}
+{% set user = salt['pillar.get']('user') %}
+{% set admin = salt['pillar.get']('admin') %}
 
 create_user:
   user.present:
@@ -11,12 +12,14 @@ create_user:
     - groups:
       - wheel
 
+{% if admin %}
 create_group_netuser:
   group.present:
     - name: netuser
     - gid: 1100
     - members:
       - {{ user }}
+{% endif %}
 
 ssh_authorized_keys:
   ssh_auth.manage:
@@ -37,7 +40,7 @@ create_bashrc_d:
 deploy_bashrc_default:
   file.managed:
     - name:   /home/{{ user }}/.bashrc.d/default
-    - source: salt://files/{{ user }}/bashrc
+    - source: salt://files/bashrc_default_user
     - user:   {{ user }}
     - group:  {{ user }}
     - mode:   644
@@ -65,7 +68,7 @@ deploy_vimrc:
     - user:   {{ user }}
     - group:  {{ user }}
     - mode:   644
-
+    
 deploy_rpmmacros:
   file.managed:
     - name:   /home/{{ user }}/.rpmmacros

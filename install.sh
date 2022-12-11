@@ -5,16 +5,13 @@ set -e
 dnf install -y salt-minion rsync
 echo 'file_client: local' > /etc/salt/minion.d/local.conf
 
-mkdir -p /srv/salt
+mkdir -p /srv/{pillar,salt}
+rsync -aHAX pillar/ /srv/pillar
 rsync -aHAX salt/ /srv/salt
 
-states='install_rpmfusion_free pam_su user_leif user_root sshd install_cinnamon dnf set_time mac_m1'
+states='file_py ssh pam time dnf user root cinnamon cinnamon.calendar gedit brave systems.mac_m1 systems.mac_m1.network'
 
 for state in $states
 do
    salt-call state.sls $state
 done
-
-# don't enable NetworkManager yet. Need to perform more testing.
-systemctl disable --now NetworkManager.service
-#systemctl disable --now iwd systemd-networkd

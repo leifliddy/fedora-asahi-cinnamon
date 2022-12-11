@@ -2,7 +2,7 @@
 deploy_sshd_base_restrict:
   file.managed:
     - name:   /etc/ssh/sshd_config.d/10-base-restrict.conf
-    - source: salt://files/sshd_config
+    - source: salt://ssh/files/sshd_config
     - user:   root
     - group:  root
     - mode:   600

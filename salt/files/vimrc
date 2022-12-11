@@ -3,3 +3,5 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 retab
+
+autocmd BufNewFile,BufRead *.sls set syntax=yaml

@@ -17,3 +17,11 @@ removetrailingwhitespace() {
 findit() {
   find . -type f | xargs grep $1
 }
+
+dep() {
+   dnf builddep $1
+}
+
+wp() {
+   dnf whatprovides "*$1*"
+}

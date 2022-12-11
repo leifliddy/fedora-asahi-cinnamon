@@ -1,8 +1,7 @@
-{% set user = 'root' %}
 
 ssh_authorized_keys:
   ssh_auth.manage:
-    - user: {{ user }}
+    - user: root
     - enc: ssh-ed25519
     - ssh_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUe9W/59j6yBXx0FTOWKpKTPXciGMw746ZErf7d8EJt leif.liddy@black.example.com
@@ -11,55 +10,55 @@ ssh_authorized_keys:
 
 deploy_bashrc_stock:
   file.managed:
-    - name:    /{{ user }}/.bashrc
+    - name:    /root/.bashrc
     - source: salt://files/bashrc_stock
-    - user:   {{ user }}
-    - group:  {{ user }}
+    - user:   root
+    - group:  root
     - mode:   644
 
 create_bashrc_d:
   file.directory:
-    - name:  /{{ user }}/.bashrc.d
-    - user:  {{ user }}
-    - group: {{ user }}
+    - name:  /root/.bashrc.d
+    - user:  root
+    - group: root
     - mode:  755
 
 deploy_bashrc_default:
   file.managed:
-    - name:   /{{ user }}/.bashrc.d/default
-    - source: salt://files/{{ user }}/bashrc
-    - user:   {{ user }}
-    - group:  {{ user }}
+    - name:   /root/.bashrc.d/default
+    - source: salt://files/bashrc_default_root
+    - user:   root
+    - group:  root
     - mode:   644
 
 deploy_bashrc_podman:
   file.managed:
-    - name:   /{{ user }}/.bashrc.d/podman
+    - name:   /root/.bashrc.d/podman
     - source: salt://files/bashrc_podman
-    - user:   {{ user }}
-    - group:  {{ user }}
+    - user:   root
+    - group:  root
     - mode:   644
     
 deploy_bashrc_rpmbuild:
   file.managed:
-    - name:   /{{ user }}/.bashrc.d/rpmbuild
+    - name:   /root/.bashrc.d/rpmbuild
     - source: salt://files/bashrc_rpmbuild
-    - user:   {{ user }}
-    - group:  {{ user }}
+    - user:   root
+    - group:  root
     - mode:   644
 
 deploy_vimrc:
   file.managed:
-    - name:   /{{ user }}/.vimrc
+    - name:   /root/.vimrc
     - source: salt://files/vimrc
-    - user:   {{ user }}
-    - group:  {{ user }}
+    - user:   root
+    - group:  root
     - mode:   644
     
 deploy_rpmmacros:
   file.managed:
-    - name:   /{{ user }}/.rpmmacros
+    - name:   /root/.rpmmacros
     - source: salt://files/rpmmacros
-    - user:   {{ user }}
-    - group:  {{ user }}
+    - user:   root
+    - group:  root
     - mode:   644
