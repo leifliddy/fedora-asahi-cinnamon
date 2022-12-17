@@ -1,5 +1,9 @@
 {% set timezone = salt['pillar.get']('timezone') %}
 
+install_chrony:
+  pkg.installed:
+    - name: chrony
+
 set_timezone:
   cmd.run:
     - name: timedatectl set-timezone {{ timezone }}
