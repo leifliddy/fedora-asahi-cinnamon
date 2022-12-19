@@ -77,6 +77,7 @@ add_pkgs:
 add_admin_pkgs:
   pkg.installed:
     - pkgs:
+      - fedpkg
       - kernel-devel
       - krb5-workstation      
       - podman
