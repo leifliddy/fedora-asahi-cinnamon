@@ -31,9 +31,11 @@ deploy_wallpaper_to_usr_share_backgrounds:
         
 set_desktop_wallpaper:
   file.managed:
-    - user:   {{ user }}
-    - group:  {{ user }}
-    - mode:   644
+    - user:     {{ user }}
+    - group:    {{ user }}
+    - mode:     644
+    - dir_mode: 755
+    - makedirs: True
     - names:
       - /home/{{ user }}/.local/share/shotwell/wallpaper/wallpaper.jpg:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
