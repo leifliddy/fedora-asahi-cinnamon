@@ -42,6 +42,12 @@ set_desktop_wallpaper:
       - /home/{{ user }}/.local/share/shotwell/wallpaper/wallpaper_alt.jpg:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}        
 
+uncomment_background_option:
+  file.uncomment:
+    - name: /etc/lightdm/slick-greeter.conf
+    - regex: ^background=/.*$
+    - onlyif: ! background=/usr/share/backgrounds/default.png
+
 set_login_wallpaper:
   file.replace:
     - name:    /etc/lightdm/slick-greeter.conf
