@@ -78,6 +78,7 @@ add_admin_pkgs:
   pkg.installed:
     - pkgs:
       - kernel-devel
+      - krb5-workstation      
       - podman
       - podman-docker
       - python3-pip
