@@ -40,9 +40,9 @@ set_desktop_wallpaper:
       - /home/{{ user }}/.local/share/shotwell/wallpaper/wallpaper.jpg:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
       - /home/{{ user }}/.local/share/shotwell/wallpaper/wallpaper_alt.jpg:
-        - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}        
+        - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
 
-uncomment_background_option:
+slickgreeter_uncomment_background:
   file.uncomment:
     - name: /etc/lightdm/slick-greeter.conf
     - regex: ^background=/.*$
@@ -54,6 +54,11 @@ set_login_wallpaper:
     - pattern: '^background=.*$'
     - repl:    'background=/usr/share/backgrounds/images/{{ wallpaper_login }}'
     - backup:  False
+
+slickgreeter_uncomment_logo:
+  file.uncomment:
+    - name: /etc/lightdm/slick-greeter.conf
+    - regex: ^logo=.*$
 
 deploy_double_scaling_desktop_config:
   file.managed:
