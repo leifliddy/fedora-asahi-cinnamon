@@ -6,6 +6,15 @@ include:
   - repos.negativo
   {% endif %}
 
+install_systemd-resolved:
+  pkg.installed:
+    - name: systemd-resolved
+
+restart_systemd_resolved_service:
+  cmd.run:
+    - name: systemctl restart systemd-resolved
+    - onlyif: systemctl is-active -q systemd-resolved
+
 # pkg.group_installed doesn't currently work for environmental groups like 'Cinnamon Desktop'
 # using this method for now....
 
@@ -22,10 +31,6 @@ install_{{ group }}:
     - name: {{ group }}
 {% endfor %}
 
-restart_systemd_resolved_service:
-  cmd.run:
-    - name: systemctl restart systemd-resolved
-    - onlyif: systemctl is-active -q systemd-resolved
 
 remove_pkgs:
   pkg.removed:
