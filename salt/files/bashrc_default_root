@@ -4,6 +4,7 @@ alias luf='systemctl list-unit-files'
 #alias updategrub='grub2-mkconfig -o /etc/grub2-efi.cfg'
 alias showerror='journalctl -p err -b'
 alias vacuum='journalctl --vacuum-time=1d'
+alias sourceit='source ~/.bashrc'
 
 alias wgup='systemctl start wg-quick@wg0'
 alias wgdown='systemctl stop wg-quick@wg0'
@@ -16,10 +17,6 @@ removetrailingwhitespace() {
 
 findit() {
   find . -type f | xargs grep $1
-}
-
-dep() {
-   dnf builddep $1
 }
 
 wp() {
