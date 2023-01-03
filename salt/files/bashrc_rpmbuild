@@ -4,3 +4,7 @@ alias gobuild='cd ~/rpmbuild/BUILD'
 alias gobuildroot='cd ~/rpmbuild/BUILDROOT'
 alias gorpm='cd ~/rpmbuild/RPMS'
 alias gosrpm='cd ~/rpmbuild/SRPMS'
+
+dep() {
+   dnf builddep $1
+}
