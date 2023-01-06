@@ -1,5 +1,5 @@
 [org/blueman/general]
-window-properties=[677, 448, 139, 33]
+window-properties=[677, 448, 139, 61]
 
 [org/blueman/plugins/powermanager]
 auto-power-on=@mb true
@@ -51,10 +51,12 @@ repeat-interval=uint32 30
 double-click=400
 drag-threshold=8
 natural-scroll=false
+speed=-0.010845986984815648
 
 [org/cinnamon/desktop/peripherals/touchpad]
 natural-scroll=false
 send-events='enabled'
+speed=0.68329718004338402
 
 [org/cinnamon/desktop/screensaver]
 lock-enabled=false
@@ -105,6 +107,10 @@ unplug-enabled=false
 
 [org/cinnamon/theme]
 name='Mint-Y-Dark-Aqua'
+
+[org/gnome/control-center]
+last-panel='wifi'
+window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -194,6 +200,14 @@ enable-fingerprint-authentication=false
 enable-password-authentication=true
 enable-smartcard-authentication=false
 
+[org/gnome/nm-applet/eap/581d123f-44f0-38a4-b91f-205777389fa2]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/66a8f2cf-603b-4125-a82e-ab4306fcc391]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/shell]
 disable-user-extensions=true
 welcome-dialog-last-shown-version='43.1'
@@ -217,10 +231,12 @@ selected-color=(true, 1.0, 1.0, 1.0, 1.0)
 trash-icon-visible=false
 
 [org/nemo/preferences]
+date-format-monospace=false
 default-folder-viewer='list-view'
 
 [org/nemo/window-state]
-geometry='800x550+25+25'
-maximized=false
+devices-expanded=false
+geometry='640x737+640+0'
+maximized=true
 sidebar-bookmark-breakpoint=5
 start-with-sidebar=true
