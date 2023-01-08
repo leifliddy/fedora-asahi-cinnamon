@@ -13,7 +13,6 @@ install_systemd-resolved:
 restart_systemd_resolved_service:
   cmd.run:
     - name: systemctl restart systemd-resolved
-    - onlyif: systemctl is-active -q systemd-resolved
 
 # pkg.group_installed doesn't currently work for environmental groups like 'Cinnamon Desktop'
 # using this method for now....
