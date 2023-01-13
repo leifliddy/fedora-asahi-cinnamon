@@ -7,5 +7,7 @@ findit() {
 }
 
 removetrailingwhitespace() {
-   sed -i 's/[ \t]*$//' "$1"
+  for file in $@; do
+    sed -i 's/[ \t]*$//' "$file"
+  done
 }
