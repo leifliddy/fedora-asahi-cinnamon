@@ -12,7 +12,9 @@ alias wgenable='systemctl enable wg-quick@wg0'
 alias wgdisable='systemctl disable wg-quick@wg0'
 
 removetrailingwhitespace() {
-   sed -i 's/[ \t]*$//' "$1"
+  for file in $@; do
+    sed -i 's/[ \t]*$//' "$file"
+  done
 }
 
 findit() {
