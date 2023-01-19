@@ -5,6 +5,7 @@ ssh_authorized_keys:
     - enc: ssh-ed25519
     - ssh_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUe9W/59j6yBXx0FTOWKpKTPXciGMw746ZErf7d8EJt leif.liddy@black.example.com
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFxHJJxPuAzo3H8DBd/xai6PLiK951hOBRlgbB83rnYd root@black.example.com
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN4NU5CHu4XAkia/J6NSrunmffKa3Vq+GBL7tXDx91fJ leif.liddy@cloud.leifliddy.com
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGdpPv6AUY3uOJRiK5ukdCYsmrr/6RWWR3lssVWVKsNG leif.liddy@mac.example.com
 
