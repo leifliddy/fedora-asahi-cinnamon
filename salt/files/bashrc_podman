@@ -9,4 +9,5 @@ alias startrocky8='podman run --rm -ti -h rockylinux8 docker.io/library/rockylin
 alias startfedora34='podman run --rm -ti -h fedora34 registry.fedoraproject.org/fedora:34 /bin/bash'
 alias startfedora35='podman run --rm -ti -h fedora35 registry.fedoraproject.org/fedora:35 /bin/bash'
 alias startfedora36='podman run --rm -ti -h fedora36 registry.fedoraproject.org/fedora:36 /bin/bash'
-alias startfedora='podman run --rm -ti -h fedora37 registry.fedoraproject.org/fedora:37 /bin/bash'
+alias startfedora37='podman run --rm -ti -h fedora37 registry.fedoraproject.org/fedora:37 /bin/bash'
+alias startfedora='podman run --rm -ti -h fedora38 registry.fedoraproject.org/fedora:38 /bin/bash'
