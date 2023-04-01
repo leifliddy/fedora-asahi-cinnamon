@@ -3,6 +3,26 @@
 {% set wallpaper_login =   'black_and_white_boat_darkness.jpg' %}
 {% set wallpaper_desktop = 'blur_bokeh_dark.jpg' %}
 
+install_terminus_console_fonts:
+  pkg.installed:
+    - name: terminus-fonts-console
+
+deploy_vconsole_conf:
+  file.managed:
+    - name:   /etc/vconsole.conf
+    - source: salt://systems/mac_m1/files/vconsole.conf
+    - user:   root
+    - group:  root
+    - mode:   644
+    - require:
+      - install_terminus_console_fonts
+
+update_grub:
+  cmd.run:
+  - name: grub2-mkconfig -o /boot/grub2/grub.cfg
+  - onchanges:
+    - deploy_vconsole_conf
+
 ensure_autostart_dir_exists:
   file.directory:
     - name:     /home/{{ user }}/.config/autostart
@@ -28,7 +48,7 @@ deploy_wallpaper_to_usr_share_backgrounds:
         - source: salt://systems/mac_m1/files/{{ wallpaper_login }}
       - /usr/share/backgrounds/images/{{ wallpaper_desktop }}:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
-        
+
 set_desktop_wallpaper:
   file.managed:
     - user:     {{ user }}

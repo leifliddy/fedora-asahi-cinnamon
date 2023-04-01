@@ -39,7 +39,7 @@ deploy_bashrc_podman:
     - user:   root
     - group:  root
     - mode:   644
-    
+
 deploy_bashrc_rpmbuild:
   file.managed:
     - name:   /root/.bashrc.d/rpmbuild
@@ -48,6 +48,15 @@ deploy_bashrc_rpmbuild:
     - group:  root
     - mode:   644
 
+deploy_bashrc_git:
+  file.managed:
+    - name:   /root/.bashrc.d/git
+    - source: salt://files/bashrc_git
+    - user:   root
+    - group:  root
+    - mode:   644
+
+bashrc_git
 deploy_vimrc:
   file.managed:
     - name:   /root/.vimrc
@@ -55,7 +64,7 @@ deploy_vimrc:
     - user:   root
     - group:  root
     - mode:   644
-    
+
 deploy_rpmmacros:
   file.managed:
     - name:   /root/.rpmmacros
