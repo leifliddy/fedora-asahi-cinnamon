@@ -56,7 +56,6 @@ deploy_bashrc_git:
     - group:  root
     - mode:   644
 
-bashrc_git
 deploy_vimrc:
   file.managed:
     - name:   /root/.vimrc
