@@ -63,10 +63,10 @@ deploy_bashrc_rpmbuild:
 
 deploy_bashrc_git:
   file.managed:
-    - name:   /root/.bashrc.d/git
+    - name:   /home/{{ user }}/.bashrc.d/git
     - source: salt://files/bashrc_git
-    - user:   root
-    - group:  root
+    - user:   {{ user }}
+    - group:  {{ user }}
     - mode:   644
 
 deploy_vimrc:
