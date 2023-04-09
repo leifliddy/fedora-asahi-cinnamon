@@ -9,7 +9,7 @@ mkdir -p /srv/{pillar,salt}
 rsync -aHAX pillar/ /srv/pillar
 rsync -aHAX salt/ /srv/salt
 
-states='file_py remix ssh pam time dnf user root cinnamon.calendar gedit brave systems.mac_m1'
+states='file_py remix ssh pam time dnf user root cinnamon cinnamon.calendar gedit brave systems.mac_m1'
 
 for state in $states
 do
