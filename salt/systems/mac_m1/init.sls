@@ -1,7 +1,13 @@
 {% set user = salt['pillar.get']('user') %}
+{% set hostname = salt['pillar.get']('hostname_m1') %}
 
 {% set wallpaper_login =   'black_and_white_boat_darkness.jpg' %}
 {% set wallpaper_desktop = 'blur_bokeh_dark.jpg' %}
+
+set_hostname:
+  cmd.run:
+    - name:  hostnamectl set-hostname {{ hostname }}
+    - unless: hostname | grep ^{{ hostname }}$
 
 install_terminus_console_fonts:
   pkg.installed:
