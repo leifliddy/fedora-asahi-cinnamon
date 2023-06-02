@@ -1,0 +1,7 @@
+ss() {
+   # where $1 is a path like /srv/salt/base/hardening/post_install/audit
+   [[ -z $(echo $1 | grep '/') ]] && salt-call state.sls $1 && return
+   state=$(echo $1 | sed 's/\/srv\/salt\///' | sed 's/init\.sls//' | sed 's/^\///' | sed 's/\/$//' | sed 's/\.sls//' | tr '/' '.')
+   echo "salt-call state.sls $state"
+   salt-call state.sls $state
+}
