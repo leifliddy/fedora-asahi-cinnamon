@@ -29,6 +29,14 @@ update_grub:
   - onchanges:
     - deploy_vconsole_conf
 
+deploy_udev_battery_rule:
+  file.managed:
+    - name:   /etc/udev/rules.d/10-battery.rules
+    - source: salt://systems/mac_m1/files/10-battery.rules
+    - user:   root
+    - group:  root
+    - mode:   644
+
 ensure_autostart_dir_exists:
   file.directory:
     - name:     /home/{{ user }}/.config/autostart
