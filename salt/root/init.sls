@@ -48,7 +48,7 @@ deploy_bashrc_rpmbuild:
     - group:  root
     - mode:   644
 
-deploy_bashrc_rpmbuild:
+deploy_bashrc_salt:
   file.managed:
     - name:   /root/.bashrc.d/salt
     - source: salt://files/bashrc_salt
