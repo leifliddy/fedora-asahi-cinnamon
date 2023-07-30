@@ -24,6 +24,9 @@ enable_start_systemd_resolved_service:
 # don't install the Guest Desktop Agents group
 {% set index = install_groups.index("Guest Desktop Agents") %}
 {% set tmp = install_groups.pop(index) %}
+# receiving errors when trying to install the Hardware Support group
+{% set index = install_groups.index("Hardware Support") %}
+{% set tmp = install_groups.pop(index) %}
 
 {#{% do salt.log.warning('install_groups: ' ~ install_groups) %}#}
 
