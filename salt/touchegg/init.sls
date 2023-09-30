@@ -29,4 +29,6 @@ create_systemd_target_symlink:
   file.symlink:
     - name:     /home/{{ user }}/.config/systemd/user/default.target.wants/touchegg-client.service
     - target:   /home/{{ user }}/.config/systemd/user/touchegg-client.service
+    - user:     {{ user }}
+    - group:    {{ user }}
     - makedirs: true
