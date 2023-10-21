@@ -92,6 +92,5 @@ add_admin_pkgs:
       - python3-termcolor
       - python3-wheel
       - rpmdevtools
-      - Signal-Desktop
       - x2goclient
 {% endif %}
