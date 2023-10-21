@@ -2,9 +2,6 @@
 
 include:
   - repos.rpmfusion_free
-  {% if admin %}  
-  - repos.negativo
-  {% endif %}
 
 install_systemd-resolved:
   pkg.installed:
