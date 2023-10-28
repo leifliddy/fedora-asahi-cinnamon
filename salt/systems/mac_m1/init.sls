@@ -9,10 +9,6 @@ set_hostname:
     - name:  hostnamectl set-hostname {{ hostname }}
     - unless: hostname | grep ^{{ hostname }}$
 
-install_terminus_console_fonts:
-  pkg.installed:
-    - name: terminus-fonts-console
-
 deploy_vconsole_conf:
   file.managed:
     - name:   /etc/vconsole.conf
@@ -20,12 +16,10 @@ deploy_vconsole_conf:
     - user:   root
     - group:  root
     - mode:   644
-    - require:
-      - install_terminus_console_fonts
 
 update_grub:
   cmd.run:
-  - name: grub2-mkconfig -o /boot/grub2/grub.cfg
+  - name: dracut -f
   - onchanges:
     - deploy_vconsole_conf
 
