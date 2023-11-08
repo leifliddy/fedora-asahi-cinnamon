@@ -12,3 +12,7 @@ removetrailingwhitespace() {
     sed -i 's/[ \t]*$//' "$file"
   done
 }
+
+getp() {
+   rpm -qf $(which $1)
+}
