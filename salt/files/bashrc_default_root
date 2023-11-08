@@ -24,3 +24,7 @@ findit() {
 wp() {
    dnf whatprovides "*$1*"
 }
+
+getp() {
+   rpm -qf $(which $1)
+}
