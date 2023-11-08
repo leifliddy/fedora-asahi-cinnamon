@@ -80,7 +80,7 @@ add_admin_pkgs:
   pkg.installed:
     - pkgs:
       - fedpkg
-      - kernel-devel
+      - kernel-16k-devel
       - krb5-workstation      
       - podman
       - podman-docker
