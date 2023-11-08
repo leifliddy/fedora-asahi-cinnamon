@@ -1,6 +1,7 @@
 alias de='cd ~/Desktop'
 alias cr='su - root'
 alias sourceit='source ~/.bashrc'
+alias nn='nemo $(pwd)'
 
 findit() {
   find . -type f | xargs grep $1
