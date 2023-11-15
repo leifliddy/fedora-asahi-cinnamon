@@ -122,7 +122,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='sound'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -163,6 +163,15 @@ xkb-options=@as []
 gtk-im-module='gtk-im-context-simple:xim'
 toolkit-accessibility=false
 
+[org/gnome/desktop/notifications]
+application-children=['org-freedesktop-problems-applet', 'gnome-power-panel']
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-freedesktop-problems-applet]
+application-id='org.freedesktop.problems.applet.desktop'
+
 [org/gnome/desktop/screensaver]
 picture-options='zoom'
 picture-uri='file:///home/leif.liddy/.local/share/shotwell/wallpaper/wallpaper.jpg'
@@ -176,9 +185,11 @@ active-plugins=['spell', 'sort', 'openlinks', 'modelines', 'filebrowser', 'docin
 
 [org/gnome/gedit/preferences/editor]
 display-line-numbers=false
+editor-font='Monospace 11'
 insert-spaces=true
 scheme='oblivion'
 tabs-size=uint32 4
+use-default-font=false
 wrap-last-split-mode='word'
 
 [org/gnome/gedit/preferences/ui]
@@ -194,7 +205,7 @@ state=87168
 [org/gnome/gnome-screenshot]
 delay=0
 include-pointer=false
-last-save-directory='file:///home/leif.liddy/Pictures'
+last-save-directory='file:///home/leif.liddy/Desktop'
 
 [org/gnome/gnome-system-monitor]
 current-tab='resources'
@@ -213,6 +224,9 @@ enable-fingerprint-authentication=false
 enable-password-authentication=true
 enable-smartcard-authentication=false
 
+[org/gnome/nautilus/preferences]
+migrated-gtk-settings=true
+
 [org/gnome/nm-applet/eap/581d123f-44f0-38a4-b91f-205777389fa2]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
@@ -225,10 +239,16 @@ ignore-phase2-ca-cert=false
 disable-user-extensions=true
 welcome-dialog-last-shown-version='43.1'
 
+[org/gnome/shell/world-clocks]
+locations=@av []
+
 [org/gnome/shotwell/profiles/preferences/window]
 direct-height=746
 direct-maximize=false
 direct-width=1024
+
+[org/gnome/software]
+first-run=false
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(46,52,54)'
@@ -236,9 +256,93 @@ bold-is-bright=true
 foreground-color='rgb(255,255,255)'
 use-theme-colors=false
 
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=false
+
 [org/gtk/settings/color-chooser]
 custom-colors=[(0.090196078431372548, 0.078431372549019607, 0.12941176470588237, 1.0), (0.1803921568627451, 0.20392156862745098, 0.21176470588235294, 1.0)]
 selected-color=(true, 1.0, 1.0, 1.0, 1.0)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=148
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(63, 0)
+window-size=(1018, 737)
+
+[org/mate/panel/general]
+object-id-list=['menu-bar', 'notification-area', 'clock', 'show-desktop', 'window-list', 'workspace-switcher']
+toplevel-id-list=['top', 'bottom']
+
+[org/mate/panel/objects/clock]
+applet-iid='ClockAppletFactory::ClockApplet'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=0
+toplevel-id='top'
+
+[org/mate/panel/objects/clock/prefs]
+custom-format=''
+format='24-hour'
+
+[org/mate/panel/objects/menu-bar]
+locked=true
+object-type='menu-bar'
+position=0
+toplevel-id='top'
+
+[org/mate/panel/objects/notification-area]
+applet-iid='NotificationAreaAppletFactory::NotificationArea'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=10
+toplevel-id='top'
+
+[org/mate/panel/objects/show-desktop]
+applet-iid='WnckletFactory::ShowDesktopApplet'
+locked=true
+object-type='applet'
+position=0
+toplevel-id='bottom'
+
+[org/mate/panel/objects/window-list]
+applet-iid='WnckletFactory::WindowListApplet'
+locked=true
+object-type='applet'
+position=20
+toplevel-id='bottom'
+
+[org/mate/panel/objects/workspace-switcher]
+applet-iid='WnckletFactory::WorkspaceSwitcherApplet'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=0
+toplevel-id='bottom'
+
+[org/mate/panel/toplevels/bottom]
+expand=true
+orientation='bottom'
+screen=0
+size=24
+y=1495
+y-bottom=0
+
+[org/mate/panel/toplevels/top]
+expand=true
+orientation='top'
+screen=0
+size=24
 
 [org/nemo/desktop]
 trash-icon-visible=false
