@@ -37,6 +37,7 @@ install_{{ group }}:
 remove_pkgs:
   pkg.removed:
     - pkgs:
+      - bash-color-prompt
       - device-mapper-multipath
       - dnfdragora
       - dnfdragora-updater
