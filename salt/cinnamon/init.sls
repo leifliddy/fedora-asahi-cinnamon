@@ -65,6 +65,7 @@ add_pkgs:
       - gedit
       - gedit-plugin-codecomment
       - git
+      - libavcodec-freeworld
       - libreoffice
       - mpv
       - salt-minion
