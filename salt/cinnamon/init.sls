@@ -75,6 +75,7 @@ add_pkgs:
       - x2goserver-desktopsharing
       - xdotool
       - xinput
+      - xset
       - youtube-dl
 
 {% if admin %}
