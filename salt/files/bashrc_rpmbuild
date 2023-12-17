@@ -8,3 +8,15 @@ alias gosrpm='cd ~/rpmbuild/SRPMS'
 dep() {
    dnf builddep $1
 }
+
+bp() {
+  rpmbuild -bp $1
+}
+
+bb() {
+  rpmbuild -bb $1
+}
+
+ba() {
+  rpmbuild -ba $1
+}
