@@ -119,3 +119,7 @@ remove_tmp_dconf_dir:
     - name: /tmp/{{ user }}_dconf
     - require:
       - compile_dconf_config
+
+run_widevine_installer:
+  cmd.run:
+    - name: yes | /usr/bin/widevine-installer
