@@ -25,6 +25,14 @@ wp() {
    dnf whatprovides "*$1*"
 }
 
-getp() {
+pp() {
    rpm -qf $(which $1)
+}
+
+qq() {
+   rpm -qa | grep $1
+}
+
+dls() {
+   dnf download --source $1
 }
