@@ -34,5 +34,6 @@ qq() {
 }
 
 dls() {
-   dnf download --source $1
+   name=$(echo $1 | sed 's/-[^-]*-[^-]*\.[^.]*\.[^.]*$//')
+   dnf download --source $name
 }
