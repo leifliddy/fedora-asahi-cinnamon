@@ -4,6 +4,9 @@ alias gobuild='cd ~/rpmbuild/BUILD'
 alias gobuildroot='cd ~/rpmbuild/BUILDROOT'
 alias gorpm='cd ~/rpmbuild/RPMS'
 alias gosrpm='cd ~/rpmbuild/SRPMS'
+alias repolist='dnf repolist'
+alias repolistall='dnf repolist --all'
+
 
 dep() {
    dnf builddep $1
@@ -20,3 +23,12 @@ bb() {
 ba() {
   rpmbuild -ba $1
 }
+
+enablerepo() {
+  dnf config-manager --enable $1
+}
+
+disablerepo() {
+  dnf config-manager --disable $1
+}
+
