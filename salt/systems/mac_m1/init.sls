@@ -1,8 +1,8 @@
 {% set user = salt['pillar.get']('user') %}
 {% set hostname = salt['pillar.get']('hostname') %}
 
-{% set wallpaper_login =   'black_and_white_boat_darkness.jpg' %}
-{% set wallpaper_desktop = 'blur_bokeh_dark.jpg' %}
+{% set wallpaper_login =   'blade_of_grass.jpg' %}
+{% set wallpaper_desktop = 'stary_night_and_radio_telescopes.jpg' %}
 
 set_hostname:
   cmd.run:
@@ -52,9 +52,9 @@ deploy_wallpaper_to_usr_share_backgrounds:
     - group:  root
     - mode:   644
     - names:
-      - /usr/share/backgrounds/images/{{ wallpaper_login }}:
+      - /usr/share/backgrounds/f40/{{ wallpaper_login }}:
         - source: salt://systems/mac_m1/files/{{ wallpaper_login }}
-      - /usr/share/backgrounds/images/{{ wallpaper_desktop }}:
+      - /usr/share/backgrounds/f40/{{ wallpaper_desktop }}:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
 
 set_desktop_wallpaper:
