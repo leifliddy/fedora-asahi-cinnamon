@@ -29,7 +29,8 @@ secondary-click-enabled=false
 secondary-click-time=1.2
 
 [org/cinnamon/desktop/background]
-picture-uri='file:///home/leif.liddy/.local/share/shotwell/wallpaper/wallpaper.jpg'
+picture-options='stretched'
+picture-uri='file:///usr/share/backgrounds/f40/stary_night_and_radio_telescopes.jpg'
 
 [org/cinnamon/desktop/interface]
 cursor-blink-time=1200
