@@ -29,69 +29,7 @@ secondary-click-enabled=false
 secondary-click-time=1.2
 
 [org/cinnamon/desktop/background]
-picture-options='stretched'[org/blueman/general]
-window-properties=[677, 448, 139, 61]
-
-[org/blueman/plugins/powermanager]
-auto-power-on=@mb true
-
-[org/cinnamon]
-enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:show-desktop@cinnamon.org:1', 'panel1:right:0:keyboard@cinnamon.org:3', 'panel1:right:1:systray@cinnamon.org:4', 'panel1:right:2:xapp-status@cinnamon.org:5', 'panel1:right:3:notifications@cinnamon.org:6', 'panel1:right:4:printers@cinnamon.org:7', 'panel1:right:5:removable-drives@cinnamon.org:8', 'panel1:right:6:network@cinnamon.org:9', 'panel1:right:8:power@cinnamon.org:10', 'panel1:right:10:calendar@cinnamon.org:11', 'panel1:right:7:sound@cinnamon.org:12', 'panel1:left:4:window-list@cinnamon.org:14', 'panel1:left:3:panel-launchers@cinnamon.org:15', 'panel1:right:11:workspace-switcher@cinnamon.org:16']
-enabled-desklets=@as []
-favorite-apps=['firefox.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Screenshot.desktop', 'cinnamon-settings.desktop']
-next-applet-id=17
-panel-edit-mode=false
-panel-launchers=['DEPRECATED']
-panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
-panels-height=['1:31']
-
-[org/cinnamon/cinnamon-session]
-quit-time-delay=60
-
-[org/cinnamon/desktop/a11y/applications]
-screen-keyboard-enabled=false
-screen-reader-enabled=false
-
-[org/cinnamon/desktop/a11y/mouse]
-dwell-click-enabled=false
-dwell-threshold=10
-dwell-time=1.2
-secondary-click-enabled=false
-secondary-click-time=1.2
-
-[org/cinnamon/desktop/background]
 picture-options='stretched'
-picture-uri='file:///usr/share/backgrounds/f40/stary_night_and_radio_telescopes.jpg'
-
-[org/cinnamon/desktop/interface]
-cursor-blink-time=1200
-cursor-size=24
-cursor-theme='Adwaita'
-gtk-im-module='gtk-im-context-simple:xim'
-gtk-theme='Mint-Y-Dark-Aqua'
-icon-theme='Mint-Y-Aqua'
-scaling-factor=uint32 2
-toolkit-accessibility=false
-
-[org/cinnamon/desktop/keybindings/media-keys]
-kbd-brightness-down=['LaunchA']
-kbd-brightness-up=['Search']
-search=@as []
-
-[org/cinnamon/desktop/peripherals/keyboard]
-delay=uint32 500
-repeat-interval=uint32 30
-
-[org/cinnamon/desktop/peripherals/mouse]
-double-click=400
-drag-threshold=8
-natural-scroll=false
-speed=-0.010845986984815648
-
-[org/cinnamon/desktop/peripherals/touchpad]
-natural-scroll=false
-send-events='enabled'
-
 picture-uri='file:///usr/share/backgrounds/f40/stary_night_and_radio_telescopes.jpg'
 
 [org/cinnamon/desktop/interface]
