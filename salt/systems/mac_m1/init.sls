@@ -1,7 +1,7 @@
 {% set user = salt['pillar.get']('user') %}
 {% set hostname = salt['pillar.get']('hostname') %}
 
-{% set wallpaper_login =   'blade_of_grass.jpg' %}
+{% set wallpaper_login =   'blur_bokeh_dark.jpg' %}
 {% set wallpaper_desktop = 'stary_night_and_radio_telescopes.jpg' %}
 
 set_hostname:
