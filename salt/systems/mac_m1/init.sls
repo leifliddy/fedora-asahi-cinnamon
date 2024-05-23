@@ -52,7 +52,7 @@ deploy_wallpaper_to_usr_share_backgrounds:
     - group:  root
     - mode:   644
     - names:
-      - /usr/share/backgrounds/f40/{{ wallpaper_login }}:
+      - /usr/share/backgrounds/images/{{ wallpaper_login }}:
         - source: salt://systems/mac_m1/files/{{ wallpaper_login }}
       - /usr/share/backgrounds/f40/{{ wallpaper_desktop }}:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
