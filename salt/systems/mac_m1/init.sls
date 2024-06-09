@@ -48,13 +48,18 @@ ensure_dconf_dir_exists:
 
 deploy_wallpaper_to_usr_share_backgrounds:
   file.managed:
-    - user:   root
-    - group:  root
-    - mode:   644
+    - user:     {{ user }}
+    - group:    {{ user }}
+    - mode:     644
+    - makedirs: true
     - names:
       - /usr/share/backgrounds/images/{{ wallpaper_login }}:
         - source: salt://systems/mac_m1/files/{{ wallpaper_login }}
-      - /usr/share/backgrounds/f40/{{ wallpaper_desktop }}:
+      - /usr/share/backgrounds/images/{{ wallpaper_desktop }}:
+        - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
+      - /usr/share/backgrounds/images/{{ wallpaper_desktop }}:
+        - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
+      - /home/leif.liddy/.local/share/shotwell/wallpaper/wallpaper.jpg:
         - source: salt://systems/mac_m1/files/{{ wallpaper_desktop }}
 
 set_desktop_wallpaper:
